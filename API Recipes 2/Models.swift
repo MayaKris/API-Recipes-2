@@ -18,3 +18,4 @@ struct Recipe: Identifiable, Codable {
     let instructions: [String]
     let image: String
 }
+
