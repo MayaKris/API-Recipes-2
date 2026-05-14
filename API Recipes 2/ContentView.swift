@@ -52,6 +52,7 @@ struct ContentView: View {
             if let (data, _) = try? await URLSession.shared.data(from: url) {
                 if let decodedResponse = try? JSONDecoder().decode(RecipeResponse.self, from: data) {
                     recipes = decodedResponse.recipes
+                    return
                 }
             }
         }
